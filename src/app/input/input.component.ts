@@ -10,25 +10,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class InputComponent {
   
+  
   palabra: string = '';
-  pal_inv: string = '';
- 
+  resultado: string = '';
 
-  conversion():boolean{
-    
-    const invertido = this.palabra.split('').reverse().join('');
-    return this.palabra === invertido;
-    }
-    
-    
-    verificar(){
-    if(this.conversion()){
-      this.pal_inv = `${this.palabra} Es capicúa`  
-    }else{
-      this.pal_inv = `${this.palabra} No es capicúa`;
-    }
+  verificarCapicua() {
+    this.resultado = this.palabra === this.palabra.split('').reverse().join('') ? `${this.palabra} Es capicúa` : `${this.palabra} No es capicúa`;
   }
-
-
-  }
-
+}
