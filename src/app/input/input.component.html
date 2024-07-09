@@ -1,15 +1,21 @@
+
 <h1>Verificar si Palabra ó Número es Capicúa</h1>
+
 <br>
+
 <h2>Ingresa una palabra ó número</h2>
-<div class="input">
-    <input type="text" placeholder="texto a verificar" [(ngModel)] = 'numero'>
-</div>
-<br>
-<p>{{num_inv}}</p>
-<br>
 
-<div class="btn">
-    <button (click)="verificar()">Verificar</button>
-    
-</div>
+<br>
+   <!-- Campo de entrada para que el usuario ingrese la palabra o número a verificar.
+        Utiliza ngModel para enlazar bidireccionalmente el valor del input con la propiedad 'palabra' del componente.
+        ngModelChange llama a la función 'verificar()' cada vez que el valor del input cambia. -->
+   <input type="text" [(ngModel)]="palabra" (ngModelChange)="verificarCapicua()" placeholder="Escribe aquí" />
 
+<div>
+
+<br>
+<!-- 
+     Muestra el valor de 'pal_inv', que es actualizado por la función 'verificar()' -->
+<p>{{resultado}}</p>
+
+<br>
