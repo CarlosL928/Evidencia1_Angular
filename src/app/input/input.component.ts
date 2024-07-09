@@ -23,9 +23,9 @@ export class InputComponent {
     
     verificar(){
     if(this.conversion()){
-      this.pal_inv = "El número es capicúa"  
+      this.pal_inv = `${this.palabra} Es capicúa`  
     }else{
-      this.pal_inv = "El número no es capicúa";
+      this.pal_inv = `${this.palabra} No es capicúa`;
     }
   }
 
