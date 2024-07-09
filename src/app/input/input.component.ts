@@ -10,24 +10,25 @@ import { FormsModule } from '@angular/forms';
 })
 export class InputComponent {
   
-  numero: string = '';
-  num_inv: string = '';
+  palabra: string = '';
+  pal_inv: string = '';
  
 
   conversion():boolean{
     
-    const invertido = this.numero.split('').reverse().join('');
-    return this.numero === invertido;
+    const invertido = this.palabra.split('').reverse().join('');
+    return this.palabra === invertido;
     }
     
     
     verificar(){
     if(this.conversion()){
-      this.num_inv = "El número es capicúa"  
+      this.pal_inv = "El número es capicúa"  
     }else{
-      this.num_inv = "El número no es capicúa";
+      this.pal_inv = "El número no es capicúa";
     }
   }
- 
-   
-}
+
+
+  }
+

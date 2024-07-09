@@ -1,15 +1,13 @@
 <h1>Verificar si Palabra ó Número es Capicúa</h1>
 <br>
 <h2>Ingresa una palabra ó número</h2>
-<div class="input">
-    <input type="text" placeholder="texto a verificar" [(ngModel)] = 'numero'>
-</div>
 <br>
-<p>{{num_inv}}</p>
+   <input type="text" [(ngModel)]="palabra" (ngModelChange)="verificar()" placeholder="Escribe aquí" />
+<div>
+<br>
+<p>{{pal_inv}}</p>
 <br>
 
-<div class="btn">
-    <button (click)="verificar()">Verificar</button>
-    
-</div>
+
+  
 
